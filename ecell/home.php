@@ -32,7 +32,6 @@
     $errors = array();
     $errorc = 0;
     
- // REGISTER USER
  if (isset($_POST['name'])) 
  {
    
