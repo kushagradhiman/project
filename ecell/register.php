@@ -22,17 +22,10 @@
     $errors = array();
     $errorc = 0;
     $db = mysqli_connect('localhost', 'user', 'password', 'users');
-
-    // REGISTER USER
     if (isset($_POST['name'])) {
-        // receive all input values from the form
         $username = mysqli_real_escape_string($db, $_POST['name']);
         $email = mysqli_real_escape_string($db, $_POST['email']);
         $num = mysqli_real_escape_string($db, $_POST['num']);
-
-
-        // first check the database to make sure 
-        // a user does not already exist with the same username and/or email
         $user_check_query = "SELECT * FROM userdata WHERE username='$username' OR email='$email' LIMIT 1";
         $result = mysqli_query($db, $user_check_query);
         $user = mysqli_fetch_assoc($result);
@@ -52,8 +45,6 @@
             $errorc += 1;
             }
         }
-
-        // Finally, register user if there are no errors in the form
         if ($errorc== 0) {
 
 
