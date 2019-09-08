@@ -80,15 +80,7 @@ $result = mysqli_query($conn, $sql);
         <?php
         while ($row = mysqli_fetch_assoc($result)) {
          ?>
-         <script>
-                            $(document).ready(function() {
-                                $("#<?= $row['id'] ?>").click(function() {
-                                    $("#<?= $row['id'] ?>1").css({
-                                      "display": "block";
-                                    })
-                                });
-                            });
-            </script>
+         
             <div style="width: 100%;">
                 <div class="box testimonial">
                     <img class="event-img" src="<?= $row["img"] ?>" />
@@ -113,7 +105,7 @@ $result = mysqli_query($conn, $sql);
                     <div class="gap"></div>
                     <div class="register-cont">
                         
-                        <div class="container " align="center" style="color: whitesmoke;">
+                        <div class="container" align="center" style="color: whitesmoke;">
                            
                             <form action="home.php" method="post">
                                 <input type="text" name="name" placeholder="Username.." required>
@@ -127,14 +119,7 @@ $result = mysqli_query($conn, $sql);
 
                 </div>
                 </div>
-            <div class="modall" id="<?= $row['id']?>1">
-                <div style="width: 100%;height:100vh;">
-                    <div class="boxm testimonial">
-                        
-                    </div>
-                </div>
-            </div>
-        
+          
             
                          <br><br><br>
                         <?php }?>
