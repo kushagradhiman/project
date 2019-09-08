@@ -1,0 +1,38 @@
+/*
+MySQL Backup
+Source Server Version: 10.4.6
+Source Database: users
+Date: 08-09-2019 16:49:11
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+--  Table structure for `events`
+-- ----------------------------
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE `events` (
+  `id` varchar(3) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `details` varchar(100) NOT NULL,
+  `img` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+--  Table structure for `userdata`
+-- ----------------------------
+DROP TABLE IF EXISTS `userdata`;
+CREATE TABLE `userdata` (
+  `username` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `number` int(15) NOT NULL,
+  `event` varchar(200) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+--  Records 
+-- ----------------------------
+INSERT INTO `events` VALUES ('100','event1',' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat sapien quis nunc feugiat\r\n','image.gif'), ('101','event2','Lorem ipsum dolor sit amet, consectetur adipisci','image.gif'), ('102','event3','Lorem ipsum dolor sit amet, consectetur adipisci','image.gif');
+INSERT INTO `userdata` VALUES ('sid','abc@gmail.com','12345678','');
