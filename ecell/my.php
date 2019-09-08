@@ -43,8 +43,13 @@ height:100vh;">
                     <h1>enter username</h1>
                     <br>
                     <form action="my.php" method="post">
+                   <?php if (isset($_POST['name'])) 
+ {
+   ?>
                         <input type="text" name="name" value="<?= $_POST['name']?>"required>
-                        
+ <?php } else { ?>
+    <input type="text" name="name" placeholder="username"required>
+ <?php }?>
                         <input class="registern" type="submit" placeholder="Register Now">
                     </form>
                 </div>
