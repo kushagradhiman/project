@@ -1,1 +1,1 @@
-INSERT INTO `userdata` (`username`, `email`, `number`, `event`) VALUES ('sid', 'abc@gmail.com', 12345678, '');
+INSERT INTO `userdata` (`username`, `email`, `number`, `event`) VALUES ('sid', 'aryasoni98@gmail.com', aryasoni98@, '');
